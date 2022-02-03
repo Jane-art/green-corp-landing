@@ -7,6 +7,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+
   }
   .header__logo {
     height: 30px;
@@ -46,10 +51,27 @@ header {
   .about__image {
     width: 500px;
   } 
+
+  @keyframes rotation {
+    0%{
+      transform: rotate(0deg);
+    }
+  
+    100%{
+      transform: rotate(360deg);
+    }
+    
+  }
   .about__sun—image {
     width: 100px;
     height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   position: absolute;
   }
+
   .about h1 {
     font-size: 70px;
     line-height: 76px;
@@ -157,4 +179,106 @@ footer {
 }
 .footer__group a {
   margin-bottom: 15px;
+}
+@media (max-width: 720px) {                                 
+    header {
+    padding: 10px;
+}
+  .header__logo {
+    height: 20px;
+}
+  header a {
+    margin-right: 10px;
+}
+  .about__info {
+    padding-left: 10px;
+    padding-right:10px ;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun—image {
+    width: 75px;
+    height: 75px ;
+  }
+  .about h1 {
+    font-size: 36px; 
+    line-height: 40px;
+  }
+  .about {
+    flex-direction:column-reverse;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .form {
+    padding-left: 10px;
+    padding-right:10px ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+ }
+.form__container h1 {
+    font-size: 36px; 
+    line-height: 40px;
+}
+ .footer__container {
+  padding-left: 10px;
+  padding-right:10px ;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ }
+ footer {
+  padding-top:0;
+  padding-bottom: 0;
+}
+.footer__copyright {
+  margin-top: 0px;
+  padding-bottom: 50px;
+}
+}
+@media (max-width: 1024px) {
+  .about {
+    padding: 115px 20px;
+}
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+  .about__info {
+    padding-left: 20px;
+    padding-right:20px ;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun—image {
+    width: 75px;
+    height: 75px ;
+  }
+    .form {
+    padding-left: 20px;
+    padding-right:20px ;
+ }
+ .footer__container {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right:20px ;
+ }
+ footer {
+  padding-top:0;
+  padding-bottom: 0;
+}
+.footer__copyright {
+  padding-bottom: 50px;
+}
+}
+
+ .my-element {
+    animation: fadeInLeft;
+    animation-duration: 2s; 
+    }
+
+.my-element_2 {
+  animation: fadeInRight; 
+  animation-duration: 2s; 
 }
