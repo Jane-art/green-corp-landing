@@ -3,15 +3,21 @@ body {
     color: #213053;
     margin: 0;
   }
-header {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
     top: 0;
-    background-color: white;
     z-index: 1;
-
+    position: fixed;
+    background: none;
+    left: 0;
+    right: 0;
+    transition: box-shadow, background-color .25s ease;
+  }
+  .header__scrolled {
+    background-color: white;
+    box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);
   }
   .header__logo {
     height: 30px;
@@ -41,7 +47,7 @@ header {
     display: flex;
            align-items: center;
            justify-content: space-around;
-           padding-top: 150px;
+           padding-top: 200px;
            padding-bottom: 150px;
            background: url('img/back.png') no-repeat;
            background-position: center;
